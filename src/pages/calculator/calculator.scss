@@ -1,0 +1,21 @@
+
+
+.wrapper {
+    width: 30rem;
+    margin: 0 auto;
+    border: 1px solid #a5a5aa;
+    padding: 1rem;
+    border-radius: 4px;
+
+    .item{
+        display: flex;
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+        align-items: center;
+    }
+
+    .action-wrapper {
+        display: flex;
+        padding: 12px;
+    }
+}
