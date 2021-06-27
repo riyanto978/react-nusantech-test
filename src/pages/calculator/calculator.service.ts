@@ -85,6 +85,9 @@ class calculatorService {
 
             //jika format / maka bagi index pertama dan seterusnya
             if (format === '/') {
+                //jika dua2nya 0 maka return total 0
+                if (total === 0 && formater.moneyToNumber(current.number) === 0) return total = 0
+
                 return total / formater.moneyToNumber(current.number)
             }
 

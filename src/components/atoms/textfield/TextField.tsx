@@ -3,7 +3,7 @@ import { textfieldInterface } from './textfield.interface'
 import inputClass from './textfield.module.scss'
 
 const TextField = (props: textfieldInterface) => {
-    const { onChange, value, isCurrency = false } = props
+    const { onChange, value, isCurrency = false, testId } = props
 
 
     const ubah = (e: ChangeEvent<HTMLInputElement>) => {
@@ -16,6 +16,7 @@ const TextField = (props: textfieldInterface) => {
             let value = e.target.value
 
             //jika inputan kosong default 0
+
             if (value.length === 0) return onChange('0')
 
 
@@ -43,7 +44,7 @@ const TextField = (props: textfieldInterface) => {
     }
 
     return (
-        <input type="text" value={value} className={inputClass.input} onChange={ubah}></input>
+        <input type="text" data-testid={`input${testId}`} value={value} className={inputClass.input} onChange={ubah}></input>
     )
 }
 

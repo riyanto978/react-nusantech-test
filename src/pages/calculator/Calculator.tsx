@@ -23,7 +23,7 @@ const Calculator = () => {
             {
                 listAngka.map((angka, index) =>
                     <section className="item" key={angka.id}>
-                        <TextField isCurrency value={angka.number} onChange={(e) => service.ubahNumber(index, e)} ></TextField>
+                        <TextField testId={angka.id} isCurrency value={angka.number} onChange={(e) => service.ubahNumber(index, e)} ></TextField>
 
                         <Checkbox value={angka.isChecked} onChange={(e) => service.ubahCheck(index, e)} />
                     </section>
@@ -33,24 +33,28 @@ const Calculator = () => {
 
             <section className="action-wrapper">
                 <Button
+                    dataTestId='add'
                     onClick={(e) => service.calculateFunction('+')}
                 >+</Button>
 
                 <Button
+                    dataTestId='minus'
                     onClick={(e) => service.calculateFunction('-')}
                 >-</Button>
 
                 <Button
+                    dataTestId='divide'
                     onClick={(e) => service.calculateFunction('/')}
                 >/</Button>
 
                 <Button
+                    dataTestId='times'
                     onClick={(e) => service.calculateFunction('x')}
                 >x</Button>
             </section>
 
             <section className="hasil">
-                Hasil : <span>{pesan}</span>
+                Hasil : <span data-testid='pesan'>{pesan}</span>
             </section>
 
         </section>

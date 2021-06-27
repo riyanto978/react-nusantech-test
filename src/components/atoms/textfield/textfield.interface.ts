@@ -15,6 +15,11 @@ export interface textfieldInterface {
     isCurrency?: boolean,
 
     /**
+     * test-id
+     */
+    testId: number,
+
+    /**
      * change event handler
      */
     onChange: (e: ChangeEvent<HTMLInputElement> | string) => void

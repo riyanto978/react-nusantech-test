@@ -5,11 +5,11 @@ import ButtonClass from './button.module.scss'
 
 const Button = (props: ButtonInterface) => {
 
-    const { children, onClick } = props
+    const { children, onClick, dataTestId } = props
 
     return (
 
-        <button className={ButtonClass.button} onClick={onClick}>
+        <button data-testid={dataTestId} className={ButtonClass.button} onClick={onClick}>
             {children}
         </button>
     )

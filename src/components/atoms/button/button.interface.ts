@@ -7,6 +7,10 @@ export interface ButtonInterface {
      */
     children: React.ReactNode,
 
+    /**
+     * data-testid
+     */
+    dataTestId: string,
 
     /**
      * onClick event handler
