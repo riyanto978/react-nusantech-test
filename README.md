@@ -1,5 +1,4 @@
 
-project ini dibuat dengan tujuan untuk test di nusantech.co
 
 dibuat dengan
 1. react typescript
